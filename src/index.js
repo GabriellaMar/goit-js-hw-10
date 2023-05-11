@@ -2,7 +2,7 @@ const debounce = require('lodash.debounce');
 import Notiflix from 'notiflix';
 import './css/styles.css';
 import API from "./fetchCountries.js";
-import { createCountriesMarkupList, createCountryInfoList } from "./createMarkup";
+import { createCountriesMarkupList, createCountryInfoList, getCountryLanguages } from "./createMarkup";
 
 const DEBOUNCE_DELAY = 300;
 
@@ -22,6 +22,8 @@ function onInput(e) {
     updateCountryInfoList('');
     return;
   }
+  let markup ='';
+  let markupInfo = '';
   API.fetchCountries(inputValue)
     .then(countries => {
       console.log(countries)
