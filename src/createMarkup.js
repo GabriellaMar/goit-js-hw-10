@@ -6,8 +6,7 @@
   }
 
 
-
-  export function createCountryInfoList({ flags, name, capital, population, languages }) {
+ export function createCountryInfoList({ flags, name, capital, population, languages }) {
     const languageList = getCountryLanguages({ languages });
     return `
     <div class="country-title-item">
@@ -23,7 +22,7 @@
   }
 
 
-  export function getCountryLanguages(country) {
+ export function getCountryLanguages(country) {
     const languages = Object.values(country.languages);
     console.log(languages)
     return languages.join(', ');

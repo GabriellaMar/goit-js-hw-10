@@ -8,11 +8,8 @@ const DEBOUNCE_DELAY = 300;
 
 
 const inputEl = document.getElementById('search-box');
-console.log(inputEl)
 const countryEl = document.querySelector('.country-list')
 const countryInfo = document.querySelector('.country-info')
-console.log(countryEl)
-
 
 
 function onInput(e) {
@@ -64,16 +61,13 @@ function onInput(e) {
     });
 }
 
-
 const onDebounceinput = debounce(onInput, DEBOUNCE_DELAY)
 inputEl.addEventListener('input', onDebounceinput);
-
 
 
 function updateCountryList(markup) {
   countryEl.innerHTML = markup
 }
-
 
 function updateCountryInfoList(markupInfo) {
   countryInfo.innerHTML = markupInfo
