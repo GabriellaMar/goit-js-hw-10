@@ -81,7 +81,3 @@ function updateCountryInfoList(markupInfo) {
 
 
 
-// {/* <li class="country-item">
-//   <img class="country-flag" src="${flags.svg}" width ='50' alt="Flag of ${name.common}">
-//   <h2 class="country-name">${name.common}</h2>
-// </li> */}
